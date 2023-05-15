@@ -14,7 +14,7 @@ class ProductController extends Controller
     
     public function index()
     {
-        $listProduct = $this->productService->getListProducts();
+        $listProduct = $this->productService->getListBestPrices();
         // dd($listProduct);
         return view('product', compact('listProduct'));
     }

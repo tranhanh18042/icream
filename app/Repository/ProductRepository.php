@@ -13,7 +13,7 @@ class ProductRepository
         $this->product = $product;
     }
 
-    public function getAll()
+    public function bestPrices()
     {
         return $this->product = Product::paginate(8)->sortBy('price');
     }
