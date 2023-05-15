@@ -19,11 +19,11 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
 
     <!-- Libraries Stylesheet -->
-    <link href="{{asset('css/lib/owlcarousel/assets/owl.carousel.min.css')}}" rel="stylesheet">
-    <link href="{{asset('css/lib/lightbox/css/lightbox.min.css')}}" rel="stylesheet">
+    <link href="{{ asset('css/lib/owlcarousel/assets/owl.carousel.min.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/lib/lightbox/css/lightbox.min.css') }}" rel="stylesheet">
 
     <!-- Customized Bootstrap Stylesheet -->
-    <link href="{{asset('css/icream/style.css')}}" rel="stylesheet">
+    <link href="{{ asset('css/icream/style.css') }}" rel="stylesheet">
 
 </head>
 
@@ -116,106 +116,28 @@
         <div class="container py-5">
             <div class="row justify-content-center">
                 <div class="col-lg-6">
-                    <h1 class="section-title position-relative text-center mb-5">Best Prices We Offer For Ice Cream Lovers</h1>
+                    <h1 class="section-title position-relative text-center mb-5">Best Prices We Offer For Ice Cream
+                        Lovers</h1>
                 </div>
             </div>
             <div class="row">
-                <div class="col-lg-3 col-md-6 mb-4 pb-2">
-                    <div class="product-item d-flex flex-column align-items-center text-center bg-light rounded py-5 px-3">
-                        <div class="bg-primary mt-n5 py-3" style="width: 80px;">
-                            <h4 class="font-weight-bold text-white mb-0">$99</h4>
+                @foreach ($listProduct as $product)
+                    <div class="col-lg-3 col-md-6 mb-4 pb-2">
+                        <div
+                            class="product-item d-flex flex-column align-items-center text-center bg-light rounded py-5 px-3">
+                            <div class="bg-primary mt-n5 py-3" style="width: 80px;">
+                                <h4 class="font-weight-bold text-white mb-0">${{$product->price}}</h4>
+                            </div>
+                            <div class="position-relative bg-primary rounded-circle mt-n3 mb-4 p-3"
+                                style="width: 150px; height: 150px;">
+                                <img class="rounded-circle w-100 h-100" src="{{$product->image_product}}"
+                                    style="object-fit: cover;">
+                            </div>
+                            <h5 class="font-weight-bold mb-4">{{$product->product_name}}</h5>
+                            <a href="" class="btn btn-sm btn-secondary">Order Now</a>
                         </div>
-                        <div class="position-relative bg-primary rounded-circle mt-n3 mb-4 p-3" style="width: 150px; height: 150px;">
-                            <img class="rounded-circle w-100 h-100" src="img/product-1.jpg" style="object-fit: cover;">
-                        </div>
-                        <h5 class="font-weight-bold mb-4">Vanilla Ice Cream</h5>
-                        <a href="" class="btn btn-sm btn-secondary">Order Now</a>
                     </div>
-                </div>
-                <div class="col-lg-3 col-md-6 mb-4 pb-2">
-                    <div class="product-item d-flex flex-column align-items-center text-center bg-light rounded py-5 px-3">
-                        <div class="bg-primary mt-n5 py-3" style="width: 80px;">
-                            <h4 class="font-weight-bold text-white mb-0">$99</h4>
-                        </div>
-                        <div class="position-relative bg-primary rounded-circle mt-n3 mb-4 p-3" style="width: 150px; height: 150px;">
-                            <img class="rounded-circle w-100 h-100" src="img/product-2.jpg" style="object-fit: cover;">
-                        </div>
-                        <h5 class="font-weight-bold mb-4">Vanilla Ice Cream</h5>
-                        <a href="" class="btn btn-sm btn-secondary">Order Now</a>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6 mb-4 pb-2">
-                    <div class="product-item d-flex flex-column align-items-center text-center bg-light rounded py-5 px-3">
-                        <div class="bg-primary mt-n5 py-3" style="width: 80px;">
-                            <h4 class="font-weight-bold text-white mb-0">$99</h4>
-                        </div>
-                        <div class="position-relative bg-primary rounded-circle mt-n3 mb-4 p-3" style="width: 150px; height: 150px;">
-                            <img class="rounded-circle w-100 h-100" src="img/product-3.jpg" style="object-fit: cover;">
-                        </div>
-                        <h5 class="font-weight-bold mb-4">Vanilla Ice Cream</h5>
-                        <a href="" class="btn btn-sm btn-secondary">Order Now</a>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6 mb-4 pb-2">
-                    <div class="product-item d-flex flex-column align-items-center text-center bg-light rounded py-5 px-3">
-                        <div class="bg-primary mt-n5 py-3" style="width: 80px;">
-                            <h4 class="font-weight-bold text-white mb-0">$99</h4>
-                        </div>
-                        <div class="position-relative bg-primary rounded-circle mt-n3 mb-4 p-3" style="width: 150px; height: 150px;">
-                            <img class="rounded-circle w-100 h-100" src="img/product-4.jpg" style="object-fit: cover;">
-                        </div>
-                        <h5 class="font-weight-bold mb-4">Vanilla Ice Cream</h5>
-                        <a href="" class="btn btn-sm btn-secondary">Order Now</a>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6 mb-4 pb-2">
-                    <div class="product-item d-flex flex-column align-items-center text-center bg-light rounded py-5 px-3">
-                        <div class="bg-primary mt-n5 py-3" style="width: 80px;">
-                            <h4 class="font-weight-bold text-white mb-0">$99</h4>
-                        </div>
-                        <div class="position-relative bg-primary rounded-circle mt-n3 mb-4 p-3" style="width: 150px; height: 150px;">
-                            <img class="rounded-circle w-100 h-100" src="img/product-5.jpg" style="object-fit: cover;">
-                        </div>
-                        <h5 class="font-weight-bold mb-4">Vanilla Ice Cream</h5>
-                        <a href="" class="btn btn-sm btn-secondary">Order Now</a>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6 mb-4 pb-2">
-                    <div class="product-item d-flex flex-column align-items-center text-center bg-light rounded py-5 px-3">
-                        <div class="bg-primary mt-n5 py-3" style="width: 80px;">
-                            <h4 class="font-weight-bold text-white mb-0">$99</h4>
-                        </div>
-                        <div class="position-relative bg-primary rounded-circle mt-n3 mb-4 p-3" style="width: 150px; height: 150px;">
-                            <img class="rounded-circle w-100 h-100" src="img/product-1.jpg" style="object-fit: cover;">
-                        </div>
-                        <h5 class="font-weight-bold mb-4">Vanilla Ice Cream</h5>
-                        <a href="" class="btn btn-sm btn-secondary">Order Now</a>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6 mb-4 pb-2">
-                    <div class="product-item d-flex flex-column align-items-center text-center bg-light rounded py-5 px-3">
-                        <div class="bg-primary mt-n5 py-3" style="width: 80px;">
-                            <h4 class="font-weight-bold text-white mb-0">$99</h4>
-                        </div>
-                        <div class="position-relative bg-primary rounded-circle mt-n3 mb-4 p-3" style="width: 150px; height: 150px;">
-                            <img class="rounded-circle w-100 h-100" src="img/product-2.jpg" style="object-fit: cover;">
-                        </div>
-                        <h5 class="font-weight-bold mb-4">Vanilla Ice Cream</h5>
-                        <a href="" class="btn btn-sm btn-secondary">Order Now</a>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6 mb-4 pb-2">
-                    <div class="product-item d-flex flex-column align-items-center text-center bg-light rounded py-5 px-3">
-                        <div class="bg-primary mt-n5 py-3" style="width: 80px;">
-                            <h4 class="font-weight-bold text-white mb-0">$99</h4>
-                        </div>
-                        <div class="position-relative bg-primary rounded-circle mt-n3 mb-4 p-3" style="width: 150px; height: 150px;">
-                            <img class="rounded-circle w-100 h-100" src="img/product-3.jpg" style="object-fit: cover;">
-                        </div>
-                        <h5 class="font-weight-bold mb-4">Vanilla Ice Cream</h5>
-                        <a href="" class="btn btn-sm btn-secondary">Order Now</a>
-                    </div>
-                </div>
+                @endforeach
                 <div class="col-12 text-center">
                     <a href="" class="btn btn-primary py-3 px-5">Load More</a>
                 </div>
@@ -235,10 +157,14 @@
                     </a>
                 </div>
                 <div class="col-12 mb-4">
-                    <a class="btn btn-outline-secondary btn-social mr-2" href="#"><i class="fab fa-twitter"></i></a>
-                    <a class="btn btn-outline-secondary btn-social mr-2" href="#"><i class="fab fa-facebook-f"></i></a>
-                    <a class="btn btn-outline-secondary btn-social mr-2" href="#"><i class="fab fa-linkedin-in"></i></a>
-                    <a class="btn btn-outline-secondary btn-social" href="#"><i class="fab fa-instagram"></i></a>
+                    <a class="btn btn-outline-secondary btn-social mr-2" href="#"><i
+                            class="fab fa-twitter"></i></a>
+                    <a class="btn btn-outline-secondary btn-social mr-2" href="#"><i
+                            class="fab fa-facebook-f"></i></a>
+                    <a class="btn btn-outline-secondary btn-social mr-2" href="#"><i
+                            class="fab fa-linkedin-in"></i></a>
+                    <a class="btn btn-outline-secondary btn-social" href="#"><i
+                            class="fab fa-instagram"></i></a>
                 </div>
                 <div class="col-12 mt-2 mb-4">
                     <div class="row">
@@ -255,7 +181,8 @@
                     </div>
                 </div>
                 <div class="col-12">
-                    <p class="m-0">&copy; <a href="#">Domain</a>. All Rights Reserved. Designed by <a href="https://htmlcodex.com">HTML Codex</a>
+                    <p class="m-0">&copy; <a href="#">Domain</a>. All Rights Reserved. Designed by <a
+                            href="https://htmlcodex.com">HTML Codex</a>
                     </p>
                 </div>
             </div>
