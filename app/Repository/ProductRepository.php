@@ -15,6 +15,6 @@ class ProductRepository
 
     public function getAll()
     {
-        return $this->product = Product::paginate(8);
+        return $this->product = Product::paginate(8)->sortBy('price');
     }
 }
