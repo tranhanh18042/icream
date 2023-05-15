@@ -9,13 +9,17 @@ class ProductController extends Controller
     protected $productService;
     public function __construct(ProductService $productService)
     {
-        $this->productService = $productService;        
+        $this->productService = $productService;
     }
-    
+
     public function index()
     {
         $listProduct = $this->productService->getListBestPrices();
-        // dd($listProduct);
-        return view('product', compact('listProduct'));
+        return view('productBestPrice', compact('listProduct'));
+    }
+    public function getList()
+    {
+        $listProducts = $this->productService->getListProducts();
+        return view('listProduct', compact('listProducts'));
     }
 }

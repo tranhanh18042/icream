@@ -11,7 +11,12 @@ class ProductService
     {
         $this->productRepository = $productRepository;
     }
-    public function getListBestPrices(){
+    public function getListBestPrices()
+    {
         return $this->productRepository->bestPrices();
+    }
+    public function getListProducts()
+    {
+        return $this->productRepository->getAll();
     }
 }

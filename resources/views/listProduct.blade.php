@@ -121,7 +121,7 @@
                 </div>
             </div>
             <div class="row">
-                @foreach ($listProduct as $product)
+                @foreach ($listProducts as $product)
                     <div class="col-lg-3 col-md-6 mb-4 pb-2">
                         <div
                             class="product-item d-flex flex-column align-items-center text-center bg-light rounded py-5 px-3">
@@ -138,9 +138,6 @@
                         </div>
                     </div>
                 @endforeach
-                <div class="col-12 text-center">
-                    <a href="{{url('list-product')}}" class="btn btn-primary py-3 px-5">Load More</a>
-                </div>
             </div>
         </div>
     </div>

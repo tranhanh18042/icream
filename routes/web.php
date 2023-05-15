@@ -15,3 +15,4 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/products',[ProductController::class,'index']);
+Route::get('/list-product',[ProductController::class,'getList']);
